@@ -1,0 +1,37 @@
+{
+  "name": "hyperliquid-mcp",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "biome lint .",
+    "format": "pnpm biome format . --write && pnpm biome check . --write",
+    "format:fix": "pnpm biome check --fix --unsafe .",
+    "lint:fix": "pnpm biome lint --write --unsafe .",
+    "lint:turbo": "turbo run lint",
+    "dev:web": "turbo run dev --filter='./apps/web' --filter='./packages/db'",
+    "dx": "turbo run dx",
+    "tsc": "tsc",
+    "test": "turbo run test",
+    "knip": "knip"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@types/node": "^22.15.3",
+    "knip": "^5.63.1",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@turbo/gen": "^2.5.6"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

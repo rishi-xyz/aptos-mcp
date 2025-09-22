@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "lint": {},
+    "dev": {
+      "cache": false
+    },
+    "test": {
+      "cache": false
+    },
+    "dx": {
+      "cache": false,
+      "dependsOn": ["seed"]
+    },
+    "seed": {
+      "cache": false,
+      "dependsOn": ["migrate"]
+    },
+    "migrate": {
+      "cache": false,
+      "dependsOn": ["env"]
+    },
+    "env": {
+      "cache": true
+    }
+  }
+}
