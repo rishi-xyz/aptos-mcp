@@ -1,5 +1,6 @@
 {
-  "name": "server",
+  "name": "hyperliquid-mcp-server",
+  "description": "MCP (Model Context Protocol) server for Hyperliquid",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "build":"bun build src/index.ts --outdir dist"
